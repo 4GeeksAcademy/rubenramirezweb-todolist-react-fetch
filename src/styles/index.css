@@ -1,11 +1,63 @@
+.hover-div {
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    padding-left: 5px;
+  }
+
+  .hover-div:hover {
+    background-color: rgb(248, 147, 15);
+    color: white;
+  }
+
+  /* .hover-div.completado :hover {
+    background-color: #9cf5bd;
+    color: white;
+  } */
+
+  .tareas {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 5px;
+  }
+
+  .tareas.completadas {
+    width: 100%;
+    background-color: #9cf5bd;
+    text-decoration: line-through;
+  }
+
+  .trash {
+    width: 30px;
+    height: 30px;
+    display: none;
+    color: red;
+    background-color: white;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hover-div:hover .trash {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5px;
+    cursor: pointer;
+  }
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
 /* 
-
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
+li:hover {
+    background-color: rgb(50, 15, 248);
+} */
