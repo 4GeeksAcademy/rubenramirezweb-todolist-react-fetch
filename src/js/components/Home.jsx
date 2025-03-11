@@ -108,15 +108,14 @@ const Home = () => {
 
 	const completedTodo = async (todoId) => {
 		try {
-			// Buscar la tarea específica en el estado actual
 			const todoToUpdate = todos.find(todo => todo.id === todoId);
 			if (!todoToUpdate) return;
 
-			// Invertir el estado de is_done (marcar como completado o pendiente)
+			// Invierte el estado de is_done (lo marca como completado o pendiente)
 			const updatedTodo = { ...todoToUpdate, is_done: !todoToUpdate.is_done };
 			// console.log(updatedTodo)
 
-			// Enviar la actualización al backend
+			// Envia actualización al backend
 			const response = await fetch(`${API_URL_BASE}/todos/${todoId}`, {
 				method: 'PUT',
 				headers: {
@@ -129,7 +128,7 @@ const Home = () => {
 				throw new Error("Error al actualizar la tarea.");
 			}
 
-			getTodos(); // Volver a cargar la lista después de actualizar
+			getTodos(); 
 		} catch (error) {
 			console.log(error);
 		}
